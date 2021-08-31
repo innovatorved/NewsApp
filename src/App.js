@@ -1,12 +1,14 @@
 import './App.css';
 import React, { Component } from 'react'
+import NavBar from './Component/NavBar';
+import News from './Component/News';
 
 export default class App extends Component {
-  name = "My Name is Ved";
   render() {
     return (
       <div>
-        {this.name}
+        <NavBar/>
+        <News/>
       </div>
     )
   }
