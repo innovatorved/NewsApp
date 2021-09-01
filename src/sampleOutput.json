@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
-import NewsItem from './NewsItem'
-import './styleReadMore.scss';
-
-
-export default class News extends Component {
-    articles = [
+{
+    "status": "ok",
+    "totalResults": 38,
+    "articles": [
         {
             "source": {
                 "id": null,
@@ -238,31 +235,32 @@ export default class News extends Component {
             "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/210831150539-mel-smothers-caldor-fire-evacuation-0830-super-tease.jpg",
             "publishedAt": "2021-08-31T23:14:00Z",
             "content": null
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "WLBT"
+            },
+            "author": "WLBT Digital",
+            "title": "Man who attacked MSNBC reporter in Miss. nearly caused 'environmental disaster' in Ohio - WLBT",
+            "description": "An Ohio man who attacked a TV reporter in Gulfport, Mississippi on Monday morning has a criminal past.",
+            "url": "https://www.wlbt.com/2021/08/31/man-who-attacked-msnbc-reporter-miss-nearly-caused-environmental-disaster-ohio/",
+            "urlToImage": "https://gray-wlbt-prod.cdn.arcpublishing.com/resizer/IOZq8n_DbC2QaJDWtXydcxWjTbI=/980x0/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/5Y452UZWPJA75OMCP46KRE245E.jpg",
+            "publishedAt": "2021-08-31T23:01:00Z",
+            "content": "GULFPORT, Miss. (WLBT) - An Ohio man who attacked a TV reporter in Gulfport, Mississippi on Monday morning has a criminal past.\r\nAccording to a report from Cleveland.com, in August of 2017, Benjamin … [+1154 chars]"
+        },
+        {
+            "source": {
+                "id": "the-verge",
+                "name": "The Verge"
+            },
+            "author": "Jay Peters",
+            "title": "Retailer leak suggests Google’s Pixel 6 will have 23W wireless charging - The Verge",
+            "description": "Google is reportedly working on a new wireless charging stand for its Pixel phones that could support 23W wireless charging. That could mean the upcoming Pixel 6 and 6 Pro may support 23W wireless charging as well.",
+            "url": "https://www.theverge.com/2021/8/31/22651097/google-pixel-6-pro-stand-23w-wireless-charging",
+            "urlToImage": "https://cdn.vox-cdn.com/thumbor/hl8L9Q71ACf2Zn68stth6omb0FE=/0x249:7645x4252/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/22755114/Google_Pixel_6__Portfolio_Shot.jpg",
+            "publishedAt": "2021-08-31T22:56:52Z",
+            "content": "A new Pixel Stand could support 23W wireless charging, which means the Pixel 6 might too\r\nImage: Google\r\nGoogle may be working on a new wireless charging stand for its Pixel phones, according to a le… [+1208 chars]"
         }
     ]
-    constructor(){
-        super();
-        this.state = {
-            articles : this.articles,
-        }
-    }
-    render() {
-        return (
-            <div className="container my-3">
-            <div>
-                <h2 style={{fontWeight:900}} classNem="my-2">NewsMon - Top Headline</h2>
-                <div className="row">
-                    {this.state.articles.map((ele)=>{
-                        return(
-                            <div className="col-md-4" key={ele.url}>
-                            <NewsItem  title={ele.title} description={ele.description} imgUrl={ele.urlToImage} link={ele.url} />  
-                            </div>
-                        )
-                    })}    
-                </div>
-            </div>
-            </div>
-            
-        )
-    }
 }
