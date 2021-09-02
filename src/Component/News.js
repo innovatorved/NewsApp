@@ -246,11 +246,20 @@ export default class News extends Component {
             articles : this.articles,
         }
     }
+    async componentDidMount(){
+        // componentDidMount() always Run After render() fuction
+        let url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=3f23d69092df4a47a2152163c0e65f7c";
+        let data = await fetch(url);
+        let parseData = await data.json();
+        console.log(data);
+        
+    }
+
     render() {
         return (
             <div className="container my-3">
             <div>
-                <h2 style={{fontWeight:900}} classNem="my-2">NewsMon - Top Headline</h2>
+                <h2 style={{fontWeight:900}} className="my-2">NewsMon - Top Headline</h2>
                 <div className="row">
                     {this.state.articles.map((ele)=>{
                         return(
@@ -266,3 +275,4 @@ export default class News extends Component {
         )
     }
 }
+
